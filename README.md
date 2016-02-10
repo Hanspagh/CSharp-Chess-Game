@@ -4,7 +4,7 @@ Let's learn some C# by building a chess game
 ## Prerequisite 
 * Install Visual Studio - https://www.visualstudio.com/products/visual-studio-community-vs
 * Install git - https://git-scm.com/downloads
-* Clone project 
+* Clone project - https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf
 
 ## Roadmap
 - [ ] Create representation of game board
