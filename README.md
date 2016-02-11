@@ -7,8 +7,8 @@ Let's learn some C# by building a chess game
 * Clone project - https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf
 
 ## Roadmap
-- [ ] Create representation of game board
-- [ ] Make a text representation to show the board
+- [x] Create representation of game board
+- [x] Make a text representation to show the board
 - [ ] Move chess pieces on the board
 - [ ] Make a view to show the board
 - [ ] and much more to come
