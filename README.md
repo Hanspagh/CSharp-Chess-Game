@@ -1,4 +1,4 @@
-# C-Chess-Game
+# C#-Chess-Game
 Let's learn some C# by building a chess game
 
 ## Prerequisite 
