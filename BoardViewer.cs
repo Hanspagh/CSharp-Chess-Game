@@ -10,9 +10,9 @@ namespace Chess_Game
     {
     public void Show (BoardSquare[,] Board)
         {
-            for (int j = 0; j < 8; j++)
+            for (int j = 7; j >= 0; j--)
             {
-                for (int i = 7; i >= 0; i--)
+                for (int i = 0; i < 8; i++)
                 {
                     if (Board[i, j].Piece != null)
                     {
@@ -20,7 +20,7 @@ namespace Chess_Game
                     }
                     else
                     {
-                        Console.Write("[  ]");
+                        Console.Write("[ " + Board[i,j].GetShortName() + " ]");
                     }
                 }
                 Console.WriteLine();
