@@ -9,7 +9,7 @@ Let's learn some C# by building a chess game
 ## Roadmap
 - [x] Create representation of game board
 - [x] Make a text representation to show the board
-- [ ] Move chess pieces on the board
+- [ ] Move chess pieces on the board [link](https://github.com/Hanspagh/CSharp-Chess-Game/blob/master/hints.MD)
 - [ ] Make a view to show the board
 - [ ] Add Pokemon's
 - [ ] and much more to come
