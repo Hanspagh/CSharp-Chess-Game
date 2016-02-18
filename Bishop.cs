@@ -12,5 +12,10 @@ namespace Chess_Game
         {
             Name = "B";
         }
+
+        internal override bool validateMove(Move move, ChessBoard board)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

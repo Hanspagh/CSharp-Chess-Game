@@ -50,11 +50,13 @@
     <Compile Include="Game.cs" />
     <Compile Include="King.cs" />
     <Compile Include="Knight.cs" />
+    <Compile Include="Move.cs" />
     <Compile Include="Pawn.cs" />
     <Compile Include="Piece.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queen.cs" />
     <Compile Include="Rook.cs" />
+    <Compile Include="StartGame.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

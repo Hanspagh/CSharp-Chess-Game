@@ -54,6 +54,11 @@ namespace Chess_Game
             Board[6, 7].Piece = new Knight("BLACK");
             Board[7, 7].Piece = new Rook("BLACK");
         }
+        public BoardSquare getSquare(Tuple<int,int> position)
+        {
+            return Board[position.Item1, position.Item2];
+        }
+
 
     }
 }

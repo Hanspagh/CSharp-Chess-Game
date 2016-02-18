@@ -8,15 +8,33 @@ namespace Chess_Game
 {
     class Game
     {
-        static int Main(string[] args)
+        public ChessBoard chessBoard;
+        public BoardViewer viewer;
+
+
+        public Game()
         {
-            ChessBoard chessBoard = new ChessBoard();
+            chessBoard = new ChessBoard();
+            viewer = new BoardViewer();
+            while (true)
+            {
+                viewer.Show(chessBoard.Board);
+                makeMove(viewer.getMoveInput());
 
-            BoardViewer viewer = new BoardViewer();
-            viewer.Show(chessBoard.Board);
-
-            Console.ReadLine();
-            return 0;
+            }
         }
+ 
+        private void makeMove(Move move)
+        {
+            Piece piece = chessBoard.getSquare(move.from).Piece;
+            if (piece == null || !piece.validateMove(move, chessBoard))
+            {
+                Console.WriteLine("Invalid move.");
+                return;
+            }
+            chessBoard.getSquare(move.to).Piece = piece;
+            piece.Moved = true;
+            chessBoard.getSquare(move.from).Piece = null;
+            }
     }
 }

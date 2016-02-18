@@ -8,23 +8,48 @@ namespace Chess_Game
 {
     class BoardViewer
     {
-    public void Show (BoardSquare[,] Board)
+        String pattern = "[a-h][1-8]-[a-h][1-8]";
+
+        public void Show(BoardSquare[,] board)
         {
             for (int j = 7; j >= 0; j--)
             {
                 for (int i = 0; i < 8; i++)
                 {
-                    if (Board[i, j].Piece != null)
+                    if (board[i, j].Piece != null)
                     {
-                        Console.Write("[ " + Board[i, j].Piece.Name + " ]");
+                        Console.Write("[ " + board[i, j].Piece.Name + " ]");
                     }
                     else
                     {
-                        Console.Write("[ " + Board[i,j].GetShortName() + " ]");
+                        Console.Write("[   ]");
                     }
                 }
                 Console.WriteLine();
             }
         }
-    }
+        public Move getMoveInput()
+        {
+            String moveInput = Console.ReadLine();
+            
+            if (!System.Text.RegularExpressions.Regex.IsMatch(moveInput, pattern))
+            {
+                Console.WriteLine("Input was invalid, please try again");
+                return getMoveInput();
+            }
+            return convertMove(moveInput);
+            
+        }
+        private Move convertMove(String moveInput)
+        {
+            int x1 = moveInput[0] - 97;
+            int y1 = (int) char.GetNumericValue(moveInput[1]) - 1;
+                       
+
+            int x2 = moveInput[3] - 97;
+            int y2 = (int)char.GetNumericValue(moveInput[4]) - 1;
+
+            return new Move(x1, y1, x2, y2);
+        }
+    }    
 }
