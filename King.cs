@@ -16,7 +16,12 @@ namespace Chess_Game
 
         internal override bool validateMove(Move move, ChessBoard board)
         {
-            throw new NotImplementedException();
+            if ( Math.Abs(move.to.Item1-move.from.Item1) <= 1  && Math.Abs(move.to.Item2 - move.from.Item2) <= 1  &&
+                ((Math.Abs(move.to.Item1 - move.from.Item1) + Math.Abs(move.to.Item2 - move.from.Item2) > 0)))
+            {
+                return board.getSquare(move.to).Piece == null || board.getSquare(move.to).Piece.Colour != Colour;
+            }
+            return false;
         }
     }
 }
